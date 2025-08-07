@@ -13,7 +13,7 @@ export default function AuthPage() {
           <div className="space-y-4">
             <h1 className="text-4xl md:text-6xl font-bold">
               Welcome to{' '}
-              <span className="text-yellow-300">TeachLoop</span>
+              <span className="text-white">TeachLoop</span>
             </h1>
             <p className="text-xl md:text-2xl text-white/90">
               Connect, Learn, and Teach Together
