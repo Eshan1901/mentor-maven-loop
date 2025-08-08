@@ -156,7 +156,7 @@ export default function LearnPage() {
               {/* Course Stats */}
               <div className="flex items-center justify-between text-sm text-muted-foreground">
                 <div className="flex items-center space-x-1">
-                  <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                  <Star className="h-4 w-4 fill-blue-500 text-blue-500" />
                   <span>{course.rating}</span>
                 </div>
                 <div className="flex items-center space-x-1">
