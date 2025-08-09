@@ -3,9 +3,14 @@ import { Client, Account, Databases, Storage, Query, ID } from 'appwrite';
 // Appwrite configuration
 const client = new Client();
 
+const endpoint = import.meta.env.VITE_APPWRITE_ENDPOINT || 'https://cloud.appwrite.io/v1';
+const projectId = import.meta.env.VITE_APPWRITE_PROJECT_ID || 'your-project-id';
+
+console.log('Appwrite configuration:', { endpoint, projectId });
+
 client
-  .setEndpoint(import.meta.env.VITE_APPWRITE_ENDPOINT || 'https://cloud.appwrite.io/v1')
-  .setProject(import.meta.env.VITE_APPWRITE_PROJECT_ID || 'your-project-id');
+  .setEndpoint(endpoint)
+  .setProject(projectId);
 
 // Initialize Appwrite services
 export const account = new Account(client);
@@ -33,10 +38,21 @@ export const appwriteService = {
   // Authentication
   async createAccount(email, password, name) {
     try {
+      console.log('Creating account with:', { email, name });
+      console.log('Using endpoint:', client.config.endpoint);
+      console.log('Using project:', client.config.project);
+      
       const user = await account.create(ID.unique(), email, password, name);
+      console.log('Account created successfully:', user);
       return user;
     } catch (error) {
       console.error('Error creating account:', error);
+      console.error('Error details:', {
+        message: error.message,
+        code: error.code,
+        type: error.type,
+        response: error.response
+      });
       throw error;
     }
   },

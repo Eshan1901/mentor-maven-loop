@@ -35,14 +35,14 @@ export default function TeachPage() {
       {/* Header */}
       <div className="flex justify-between items-center">
         <div>
-          <h1 className="text-4xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+          <h1 className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
             My Teaching
           </h1>
           <p className="text-muted-foreground mt-2 text-lg">
             Manage your courses and share your knowledge with the world
           </p>
         </div>
-        <Button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg btn-modern">
+        <Button className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg btn-modern">
           <Plus className="mr-2 h-5 w-5" />
           Create Course
         </Button>
@@ -53,11 +53,11 @@ export default function TeachPage() {
         <Card className="glass shadow-lg border-0 card-hover">
           <CardContent className="p-6">
             <div className="flex items-center space-x-4">
-              <div className="p-3 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl text-white">
+              <div className="p-3 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl text-white">
                 <BookOpen className="h-6 w-6" />
               </div>
               <div>
-                <p className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">2</p>
+                <p className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">2</p>
                 <p className="text-sm text-muted-foreground">Total Courses</p>
               </div>
             </div>
@@ -67,11 +67,11 @@ export default function TeachPage() {
         <Card className="glass shadow-lg border-0 card-hover">
           <CardContent className="p-6">
             <div className="flex items-center space-x-4">
-              <div className="p-3 bg-gradient-to-br from-teal-500 to-teal-600 rounded-xl text-white">
+              <div className="p-3 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-xl text-white">
                 <Users className="h-6 w-6" />
               </div>
               <div>
-                <p className="text-3xl font-bold bg-gradient-to-r from-teal-600 to-blue-600 bg-clip-text text-transparent">38</p>
+                <p className="text-3xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">38</p>
                 <p className="text-sm text-muted-foreground">Total Students</p>
               </div>
             </div>
@@ -81,11 +81,11 @@ export default function TeachPage() {
         <Card className="glass shadow-lg border-0 card-hover">
           <CardContent className="p-6">
             <div className="flex items-center space-x-4">
-              <div className="p-3 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl text-white">
+              <div className="p-3 bg-gradient-to-br from-sky-500 to-sky-600 rounded-xl text-white">
                 <Calendar className="h-6 w-6" />
               </div>
               <div>
-                <p className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">1</p>
+                <p className="text-3xl font-bold bg-gradient-to-r from-sky-600 to-blue-600 bg-clip-text text-transparent">1</p>
                 <p className="text-sm text-muted-foreground">Active Courses</p>
               </div>
             </div>
@@ -95,11 +95,11 @@ export default function TeachPage() {
         <Card className="glass shadow-lg border-0 card-hover">
           <CardContent className="p-6">
             <div className="flex items-center space-x-4">
-              <div className="p-3 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl text-white">
+              <div className="p-3 bg-gradient-to-br from-violet-500 to-violet-600 rounded-xl text-white">
                 <Video className="h-6 w-6" />
               </div>
               <div>
-                <p className="text-3xl font-bold bg-gradient-to-r from-orange-600 to-purple-600 bg-clip-text text-transparent">4.8</p>
+                <p className="text-3xl font-bold bg-gradient-to-r from-violet-600 to-indigo-600 bg-clip-text text-transparent">4.8</p>
                 <p className="text-sm text-muted-foreground">Avg Rating</p>
               </div>
             </div>
@@ -109,7 +109,7 @@ export default function TeachPage() {
 
       {/* Courses List */}
       <div className="space-y-6">
-        <h2 className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+        <h2 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
           Your Courses
         </h2>
         <div className="grid gap-6">
@@ -129,7 +129,7 @@ export default function TeachPage() {
                     variant={course.status === 'Active' ? 'default' : 'secondary'}
                     className={`px-3 py-1 rounded-full font-medium ${
                       course.status === 'Active' 
-                        ? 'bg-gradient-to-r from-green-500 to-teal-500 text-white' 
+                        ? 'bg-gradient-to-r from-blue-500 to-indigo-500 text-white' 
                         : 'bg-gray-100 text-gray-600'
                     }`}
                   >
@@ -141,18 +141,18 @@ export default function TeachPage() {
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-6 text-sm text-muted-foreground">
                     <div className="flex items-center space-x-2">
-                      <Users className="h-4 w-4 text-teal-500" />
+                      <Users className="h-4 w-4 text-blue-500" />
                       <span className="font-medium">{course.students} students</span>
                     </div>
                     <Badge 
                       variant="outline" 
-                      className="border-purple-200 text-purple-600 bg-purple-50"
+                      className="border-blue-200 text-blue-600 bg-blue-50"
                     >
                       {course.level}
                     </Badge>
                     <Badge 
                       variant="outline" 
-                      className="border-blue-200 text-blue-600 bg-blue-50"
+                      className="border-indigo-200 text-indigo-600 bg-indigo-50"
                     >
                       {course.mode}
                     </Badge>
@@ -161,14 +161,14 @@ export default function TeachPage() {
                     <Button 
                       variant="outline" 
                       size="sm"
-                      className="border-purple-200 text-purple-600 hover:bg-purple-50 transition-all duration-200"
+                      className="border-blue-200 text-blue-600 hover:bg-blue-50 transition-all duration-200"
                     >
                       Edit
                     </Button>
                     <Button 
                       variant="outline" 
                       size="sm"
-                      className="border-blue-200 text-blue-600 hover:bg-blue-50 transition-all duration-200"
+                      className="border-indigo-200 text-indigo-600 hover:bg-indigo-50 transition-all duration-200"
                     >
                       View
                     </Button>
@@ -183,12 +183,12 @@ export default function TeachPage() {
       {/* Empty state for when no courses exist */}
       {courses.length === 0 && (
         <div className="text-center py-12">
-          <div className="mx-auto w-24 h-24 bg-gradient-to-br from-purple-500 to-blue-500 rounded-full flex items-center justify-center mb-6 float">
+          <div className="mx-auto w-24 h-24 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-full flex items-center justify-center mb-6 float">
             <BookOpen className="w-12 h-12 text-white" />
           </div>
           <h3 className="text-xl font-semibold text-foreground mb-2">No courses yet</h3>
           <p className="text-muted-foreground mb-6">Start sharing your knowledge by creating your first course</p>
-          <Button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105">
+          <Button className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105">
             <Plus className="mr-2 h-5 w-5" />
             Create Your First Course
           </Button>
